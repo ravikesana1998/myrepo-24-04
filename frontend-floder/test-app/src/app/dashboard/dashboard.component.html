@@ -1,0 +1,47 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Items Dashboard</h2>
+  
+    <!-- Add Item Form -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <strong>{{ selectedItemId === null ? 'Add' : 'Edit' }} Item</strong>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="selectedItemId === null ? addItem() : updateItem()" class="row g-3">
+          <div class="col-md-6">
+            <label for="name" class="form-label">Name</label>
+            <input [(ngModel)]="newItem.name" name="name" id="name" type="text" class="form-control" required placeholder="Enter item name">
+          </div>
+          <div class="col-md-6">
+            <label for="description" class="form-label">Description</label>
+            <input [(ngModel)]="newItem.description" name="description" id="description" type="text" class="form-control" placeholder="Enter description">
+          </div>
+          <div class="col-12 d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary me-2">{{ selectedItemId === null ? 'Add' : 'Update' }}</button>
+            <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+    <!-- List of Items -->
+    <div class="card">
+      <div class="card-header">
+        <strong>Items List</strong>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <li *ngFor="let item of items" class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <strong>{{ item.name }}</strong>
+              <p class="text-muted">{{ item.description || 'No description' }}</p>
+            </div>
+            <div>
+              <button (click)="selectItemForEdit(item)" class="btn btn-sm btn-warning me-2">Edit</button>
+              <button (click)="deleteItem(item.id!)" class="btn btn-sm btn-danger">Delete</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
