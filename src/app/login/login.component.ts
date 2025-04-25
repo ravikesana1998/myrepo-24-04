@@ -26,7 +26,7 @@ export class LoginComponent {
       alert('Login successful!');
       console.log('Login Credentials:', this.credentials);
     } else {
-      alert('Invalid email or password. Please try again.error.error.error');
+      alert('Invalid email or password. Please try again.error.error.error.error');
     }
   }
 }
