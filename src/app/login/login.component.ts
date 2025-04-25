@@ -25,8 +25,19 @@ export class LoginComponent {
     ) {
       alert('Login successful!');
       console.log('Login Credentials:', this.credentials);
+
+      // Reset the form fields after successful login
+      this.resetForm();
     } else {
-      alert('Invalid email or password. Please try again.error.error.error.error.error1');
+      this.errorMessage = 'Invalid email or password. Please try again.';
+      alert(this.errorMessage);
     }
+  }
+
+  // Method to reset the form fields
+  resetForm() {
+    this.credentials.email = '';
+    this.credentials.password = '';
+    this.errorMessage = ''; // Clear any error messages
   }
 }
