@@ -1,0 +1,11 @@
+.container {
+    max-width: 500px;
+  }
+  
+  .card-header {
+    font-size: 1.5rem;
+  }
+  
+  .alert {
+    margin-top: 1rem;
+  }

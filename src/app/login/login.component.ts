@@ -16,7 +16,9 @@ export class LoginComponent {
     email: 'user@example.com',
     password: 'password123',
   };
+
   errorMessage: string = ''; // To display error messages
+
   onSubmit() {
     // Check if the entered credentials match the hardcoded values
     if (

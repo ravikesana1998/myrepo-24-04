@@ -1,50 +1,50 @@
 <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card">
-          <div class="card-header bg-primary text-white">
-            <h3 class="text-center">Login</h3>
-          </div>
-          <div class="card-body">
-            <form (ngSubmit)="onSubmit()">
-              <!-- Email Field -->
-              <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="Enter email"
-                  [(ngModel)]="credentials.email"
-                  name="email"
-                  required
-                />
-              </div>
-  
-              <!-- Password Field -->
-              <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="Password"
-                  [(ngModel)]="credentials.password"
-                  name="password"
-                  required
-                />
-              </div>
-  
-              <!-- Error Message -->
-              <div *ngIf="errorMessage" class="alert alert-danger">
-                {{ errorMessage }}
-              </div>
-  
-              <!-- Submit Button -->
-              <button type="submit" class="btn btn-primary w-100">Login</button>
-            </form>
-          </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h3 class="text-center">Login</h3>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+            <!-- Email Field -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter email"
+                [(ngModel)]="credentials.email"
+                name="email"
+                required
+              />
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Password"
+                [(ngModel)]="credentials.password"
+                name="password"
+                required
+              />
+            </div>
+
+            <!-- Error Message -->
+            <div *ngIf="errorMessage" class="alert alert-danger">
+              {{ errorMessage }}
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
+</div>
